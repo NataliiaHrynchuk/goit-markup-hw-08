@@ -1,0 +1,159 @@
+footer {
+	background-color: $foot-bg-color;
+	min-height: 252px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.footer {
+	display: flex;
+}
+
+.footer__logo {
+	color: $main-color;
+}
+
+.footer__location {
+	display: block;
+	margin-bottom: 9px;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	text-decoration: inherit;
+	color: $main-color;
+	outline: none;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.footer__mail {
+	display: block;
+	margin-bottom: 9px;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	text-decoration: inherit;
+	color: $link-color;
+	outline: none;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.footer__tel {
+	display: block;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	text-decoration: inherit;
+	color: $link-color;
+	outline: none;
+	:hover,
+	:focus {
+		color: $accent-color;
+	}
+}
+
+.footer__address {
+	display: flex;
+	flex-wrap: wrap;
+	width: 231px;
+	margin-top: 20px;
+	margin-right: 70px;
+}
+.footer__slogan {
+	margin-top: 12px;
+}
+.footer__text {
+	min-width: 145px;
+	height: 16px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: $main-color;
+}
+
+.footer__fild {
+	width: 570px;
+	height: 86px;
+	margin-top: 12px;
+	margin-left: 93px;
+}
+
+.footer__wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__input {
+	width: 358px;
+	height: 50px;
+	padding: 15px 16px;
+	background-color: $foot-bg-color;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+	filter: drop-shadow(0px 4px 4px $shadow-color);
+	border-radius: 4px;
+	color: $main-color;
+	&::placeholder {
+		width: 47px;
+		height: 20px;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.25;
+
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+.footer__btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 200px;
+	height: 50px;
+	padding: 10px 28px;
+	background: $accent-color;
+	border-radius: 4px;
+	border-style: none;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+
+	letter-spacing: 0.06em;
+
+	color: $main-color;
+
+	transition-property: background-color, border-radius;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+	&:hover,
+	&:focus {
+		background-color: $btn-hover-color;
+		border-radius: 0;
+	}
+}

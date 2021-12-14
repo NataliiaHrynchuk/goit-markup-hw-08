@@ -1,0 +1,42 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+body {
+  font-family: Roboto, sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul,
+li,
+nav,
+span {
+  display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

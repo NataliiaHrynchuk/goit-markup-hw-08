@@ -1,0 +1,121 @@
+header {
+	min-height: 80px;
+	border-bottom: 1px solid $line-color;
+}
+.logo {
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.38;
+	letter-spacing: 0.03em;
+	text-decoration: inherit;
+	margin-right: 93px;
+	color: $accent-color;
+}
+.header__logo {
+	color: $second-logo-color;
+}
+.nav__link {
+	outline: none;
+
+	position: relative;
+
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: $second-color;
+	text-decoration: inherit;
+	&::after {
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+
+		content: "";
+		display: block;
+		width: 100%;
+		height: 5px;
+		border-radius: 2px;
+
+		background: $accent-color;
+		opacity: 0;
+		transition: opacity 250ms $timing-function;
+	}
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+
+.nav__link--current {
+	color: $accent-color;
+	&::after {
+		opacity: 1;
+	}
+}
+.nav {
+	display: flex;
+}
+
+.nav__item {
+	display: block;
+	&:not(:last-child) {
+		margin-right: 50px;
+	}
+}
+.header {
+	align-items: center;
+	display: flex;
+}
+
+.auth {
+	display: flex;
+	margin-left: auto;
+}
+
+.auth__item + .auth__item {
+	margin-left: 50px;
+}
+
+.auth__link {
+	display: flex;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	text-decoration: inherit;
+	color: $text-color;
+	outline: none;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+
+.auth__icon {
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	fill: $text-color;
+	align-content: center;
+	margin-right: 10px;
+	.auth__link:hover &,
+	.auth__link:focus & {
+		fill: $accent-color;
+	}
+}

@@ -4,15 +4,21 @@
 }
 
 .team__list {
-	display: flex;
+	// display: flex;
 }
 
 .team__item {
+	width: 100%;
+	margin-bottom: 30px;
 	box-shadow: 0px 1px 3px $main-shadow-color, 0px 1px 1px $second-shadow-color, 0px 2px 1px $third-shadow-color;
 	border-radius: 0px 0px 4px 4px;
-	&:not(:last-child) {
-		margin-right: 30px;
+	@media screen and (min-width: 480px) {
+		width: 450px;
+		height: 622px;
 	}
+	// &:not(:last-child) {
+	// 	margin-right: 30px;
+	// }
 }
 .team__card {
 	padding-top: 30px;

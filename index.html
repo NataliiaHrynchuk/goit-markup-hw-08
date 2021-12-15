@@ -35,8 +35,6 @@
                     <a href="" class="nav__link">Контакты</a>
                 </li>
             </ul>
-            </nav>
-    
             <ul class="auth">
                 <li class="auth__item">
                     <a href="" class="auth__link">
@@ -55,7 +53,16 @@
                     </a>
                 </li>
             </ul>
-    
+        </nav>
+        <button type="button" class="nav__button is-open" aria-expanded="false" data-nav-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="nav__close" href="./images/icon.svg#icon-close"></use>
+            </svg>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="nav__menu" href="./images/icon.svg#icon-menu"></use>
+                
+            </svg>
+            </button>
         </div>
         </header>
 
@@ -469,5 +476,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/navbtn.js"></script>
 </body>
 </html>

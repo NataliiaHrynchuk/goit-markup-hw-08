@@ -1,6 +1,6 @@
 header {
-	min-height: 80px;
 	border-bottom: 1px solid $line-color;
+	// min-height: 80px;
 }
 .logo {
 	font-family: Raleway;
@@ -10,7 +10,7 @@ header {
 	line-height: 1.38;
 	letter-spacing: 0.03em;
 	text-decoration: inherit;
-	margin-right: 93px;
+	// margin-right: 93px;
 	color: $accent-color;
 }
 .header__logo {
@@ -62,28 +62,61 @@ header {
 		opacity: 1;
 	}
 }
-.nav {
-	display: flex;
+nav {
+	// display: flex;
+	@media screen and (max-width: 767px) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 796px;
+	}
 }
 
 .nav__item {
 	display: block;
-	&:not(:last-child) {
-		margin-right: 50px;
+	// &:not(:last-child) {
+	// 	margin-right: 50px;
+	// }
+}
+.nav__button {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+}
+.nav__menu {
+	display: none;
+}
+
+.is-open {
+	.nav__menu {
+		display: block;
+	}
+}
+.is-open {
+	.nav__close {
+		display: none;
 	}
 }
 .header {
-	align-items: center;
 	display: flex;
+	@media screen and (max-width: 767px) {
+		position: relative;
+		min-height: 60px;
+		justify-content: space-between;
+	}
+	align-items: center;
 }
 
 .auth {
-	display: flex;
-	margin-left: auto;
+	// display: flex;
+	// margin-left: auto;
 }
 
 .auth__item + .auth__item {
-	margin-left: 50px;
+	// margin-left: 50px;
 }
 
 .auth__link {

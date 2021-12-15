@@ -77,6 +77,10 @@
 <path fill="#fff" style="fill: var(--color1, #fff)" d="M32 0l-32 18 10.227 3.788 15.773-14.788-11.998 16.186 0.010 0.004-0.012-0.004v8.814l5.735-6.691 7.265 2.691 5-28z"></path>
 </symbol>
 <symbol id="icon-check" viewBox="0 0 42 32">
-<path fill="#fff" style="fill:var(--color1, #fff);stroke:var(--color1, #fff)" stroke="#fff" stroke-width=".64" d="m6.263 15.205-.22-.21-3.307 3.132 11.651 11.114L38.864 5.89l-3.285-3.134-21.192 20.197-8.124-7.75z"/></symbol>
+<path fill="#fff" style="fill:var(--color1, #fff);stroke:var(--color1, #fff)" stroke="#fff" stroke-width=".64" d="m6.263 15.205-.22-.21-3.307 3.132 11.651 11.114L38.864 5.89l-3.285-3.134-21.192 20.197-8.124-7.75z"/>
+</symbol>
+<symbol id="icon-menu" viewBox="0 0 32 32">
+<path d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z"></path>
+</symbol>
 </defs>
 </svg>

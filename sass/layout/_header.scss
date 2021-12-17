@@ -1,6 +1,16 @@
 header {
 	border-bottom: 1px solid $line-color;
+	position: relative;
 	// min-height: 80px;
+}
+.header {
+	display: flex;
+	@media screen and (max-width: 767px) {
+		position: relative;
+		min-height: 60px;
+		justify-content: space-between;
+	}
+	align-items: center;
 }
 .logo {
 	font-family: Raleway;
@@ -16,75 +26,16 @@ header {
 .header__logo {
 	color: $second-logo-color;
 }
-.nav__link {
-	outline: none;
-
-	position: relative;
-
-	display: block;
-	padding-top: 32px;
-	padding-bottom: 32px;
-
-	transition-property: color;
-	transition-duration: 250ms;
-	transition-timing-function: $timing-function;
-
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
-	letter-spacing: 0.02em;
-	color: $second-color;
-	text-decoration: inherit;
-	&::after {
-		position: absolute;
-		left: 0px;
-		bottom: 0px;
-
-		content: "";
-		display: block;
-		width: 100%;
-		height: 5px;
-		border-radius: 2px;
-
-		background: $accent-color;
-		opacity: 0;
-		transition: opacity 250ms $timing-function;
-	}
-	&:hover,
-	&:focus {
-		color: $accent-color;
-	}
-}
-
-.nav__link--current {
-	color: $accent-color;
-	&::after {
-		opacity: 1;
-	}
-}
-nav {
-	// display: flex;
-	@media screen and (max-width: 767px) {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		height: 796px;
-	}
-}
-
-.nav__item {
-	display: block;
-	// &:not(:last-child) {
-	// 	margin-right: 50px;
-	// }
-}
 .nav__button {
 	display: inline-flex;
 	margin: 0;
 	padding: 0;
 	border: none;
 	background-color: transparent;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
 }
 .nav__menu {
 	display: none;
@@ -100,17 +51,112 @@ nav {
 		display: none;
 	}
 }
-.header {
-	display: flex;
+.nav__container {
+	background-color: $main-color;
+	padding: 48px 40px;
+
+	&.is-open {
+		display: block;
+	}
+	width: 100%;
+	@media screen and (min-width: 480px) {
+		width: 480px;
+	}
 	@media screen and (max-width: 767px) {
-		position: relative;
-		min-height: 60px;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: 796px;
+	}
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+}
+.nav {
+	@media screen and (min-width: 768px) {
+		display: flex;
+		width: 294px;
+		height: 48px;
 		justify-content: space-between;
 	}
-	align-items: center;
+}
+.nav__item {
+	display: block;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 32px;
+		&:last-child {
+			margin-bottom: 302px;
+		}
+	} // &:not(:last-child) { // margin-right: 50px; // };;
+}
+.nav__link {
+	outline: none;
+
+	position: relative;
+
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: $timing-function;
+
+	font-weight: 500;
+	@media screen and (max-width: 767px) {
+		height: 48px;
+		font-size: 40px;
+		line-height: 1.17;
+	}
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: $second-color;
+	text-decoration: inherit;
+	@media screen and (min-width: 768px) {
+		&::after {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+
+			content: "";
+			display: block;
+			width: 100%;
+			height: 5px;
+			border-radius: 2px;
+
+			background: $accent-color;
+			opacity: 0;
+			transition: opacity 250ms $timing-function;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+
+.nav__link--current {
+	color: $accent-color;
+	&::after {
+		opacity: 1;
+	}
+}
+nav {
+	// display: flex;
+	// @media screen and (max-width: 767px) {
+	// 	position: absolute;
+	// 	top: 100%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 796px;
+	// }
 }
 
 .auth {
+	display: block;
 	// display: flex;
 	// margin-left: auto;
 }
@@ -120,15 +166,16 @@ nav {
 }
 
 .auth__link {
-	display: flex;
+	display: block;
+	// display: flex;
 
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
 
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 1.14;
+	// font-size: 14px;
+	// line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: inherit;
 	color: $text-color;
@@ -138,8 +185,30 @@ nav {
 		color: $accent-color;
 	}
 }
-
+.auth__tel {
+	@media screen and (max-width: 767px) {
+		font-size: 34px;
+		line-height: 1.17;
+		color: $accent-color;
+		position: relative;
+		bottom: 30px;
+	}
+	@media screen and (max-width: 479px) {
+		font-size: 24px;
+	}
+}
+.auth__mail {
+	@media screen and (max-width: 767px) {
+		font-size: 24px;
+		line-height: 1.17;
+		position: relative;
+		top: 90px;
+	}
+}
 .auth__icon {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;

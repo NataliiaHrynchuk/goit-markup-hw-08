@@ -16,61 +16,68 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
-<body>
+<body class="modal-open">
     <!--Header-->
     <header>
         <div class="header container">
-        <a href="" class="logo">Web<span class="header__logo">Studio</span>
-        </a>
+            <a href="" class="logo">Web<span class="header__logo">Studio</span>
+            </a>
             
-        <nav>
-            <ul class="nav">
-                <li class="nav__item">
-                    <a href="./index.html" class="nav__link nav__link--current">Студия</a>
-                </li>
-                <li class="nav__item">
-                    <a href="./portfolio.html" class="nav__link">Портфолио</a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">Контакты</a>
-                </li>
-            </ul>
-            <ul class="auth">
-                <li class="auth__item">
-                    <a href="" class="auth__link">
-                        <svg class="auth__icon" width="16" height="12">
-                            <use href="./images/icon.svg#icon-envelope">
-                            </use>
-                        </svg> info@devstudio.com
-                    </a>
-                </li>
-                <li class="auth__item">
-                    <a href="" class="auth__link">
-                        <svg class="auth__icon" width="10" height="16">
-                            <use href="./images/icon.svg#icon-Vector">
-                            </use>
-                        </svg>+38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <button type="button" class="nav__button is-open" aria-expanded="false" data-nav-button>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                <use class="nav__close" href="./images/icon.svg#icon-close"></use>
-            </svg>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                <use class="nav__menu" href="./images/icon.svg#icon-menu"></use>
-                
-            </svg>
-            </button>
+            <nav>
+                <button type="button" class="nav__button is-open" aria-expanded="false" data-nav-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="nav__close" href="./images/icon.svg#icon-close"></use>
+                        <use class="nav__menu" href="./images/icon.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <div class="nav__container" id="menu-conteiner"
+                data-menu>
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__link nav__link--current">Студия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./portfolio.html" class="nav__link">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="auth">
+                        <li class="auth__item">
+                            <a href="" class="auth__link auth__mail">
+                                <svg class="auth__icon" width="16" height="12">
+                                    <use href="./images/icon.svg#icon-envelope">
+                                    </use>
+                                </svg> info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="auth__item">
+                            <a href="" class="auth__link auth__tel">
+                                <svg class="auth__icon" width="10" height="16">
+                                    <use href="./images/icon.svg#icon-Vector">
+                                    </use>
+                                </svg>+38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            
+            </nav>
+        
         </div>
         </header>
 
     <main>
         <!--Hero-->
         <section class="hero section">
-            <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-            <button data-modal-open class="hero__btn" type="button">Заказать услугу</button>
+            <!-- <div class="hero__wrap"> -->
+                <h1 class="hero__title">Эффективные решения для вашего бизнеса
+                </h1>
+                <button data-modal-open class="hero__btn" type="button">Заказать услугу
+                </button>
+            <!-- </div> -->
+            
             </section>
         
         <!--Features-->

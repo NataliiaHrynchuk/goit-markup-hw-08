@@ -216,7 +216,7 @@ header {
 }
 
 .is-open .nav__close {
-  display: none;
+  display: block;
 }
 
 .nav__container {
@@ -239,7 +239,7 @@ header {
   .nav__container {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     height: 796px;
   }
@@ -249,6 +249,28 @@ header {
   .nav__container {
     display: flex;
   }
+}
+
+.nav__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  outline: none;
+  background-color: inherit;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__close:hover .nav__end,
+.nav__close:focus .nav__end {
+  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {

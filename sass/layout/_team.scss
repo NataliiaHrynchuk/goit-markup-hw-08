@@ -4,7 +4,19 @@
 }
 
 .team__list {
-	// display: flex;
+	display: block;
+	width: 100%;
+	@media screen and (min-width: 480px) {
+		width: 450px;
+	}
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		width: 738px;
+	}
+	@media screen and (min-width: 1200px) {
+		width: 1170px;
+	}
 }
 
 .team__item {
@@ -16,9 +28,20 @@
 		width: 450px;
 		height: 622px;
 	}
-	// &:not(:last-child) {
-	// 	margin-right: 30px;
-	// }
+	@media screen and (min-width: 768px) {
+		width: 354px;
+		height: 536px;
+		&:nth-child(2n + 1) {
+			margin-right: 30px;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		width: 270px;
+		height: 428px;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
 }
 .team__card {
 	padding-top: 30px;

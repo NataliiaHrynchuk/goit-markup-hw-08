@@ -120,8 +120,6 @@ header {
 	position: relative;
 
 	display: block;
-	padding-top: 32px;
-	padding-bottom: 32px;
 
 	transition-property: color;
 	transition-duration: 250ms;
@@ -139,6 +137,8 @@ header {
 	color: $second-color;
 	text-decoration: inherit;
 	@media screen and (min-width: 768px) {
+		padding-top: 32px;
+		padding-bottom: 32px;
 		&::after {
 			position: absolute;
 			left: 0px;
@@ -226,7 +226,7 @@ nav {
 		font-size: 24px;
 		line-height: 1.17;
 		position: relative;
-		top: 90px;
+		top: 80px;
 	}
 }
 .auth__icon {
@@ -243,5 +243,27 @@ nav {
 	.auth__link:hover &,
 	.auth__link:focus & {
 		fill: $accent-color;
+	}
+}
+.navsocial__list {
+	position: relative;
+	top: 100px;
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}
+.navsocial__link {
+	width: 81px;
+	height: 22px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.22;
+	color: $accent-color;
+	border-right: 1px solid rgba(33, 33, 33, 0.2);
+	:not(:first-child) {
+		padding-left: 10px;
+	}
+	:not(:last-child) {
+		padding-right: 10px;
 	}
 }

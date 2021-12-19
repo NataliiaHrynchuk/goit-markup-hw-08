@@ -26,39 +26,47 @@ header {
 .header__logo {
 	color: $second-logo-color;
 }
-.nav__button {
+.nav__open {
 	display: inline-flex;
 	margin: 0;
 	padding: 0;
 	border: none;
 	background-color: transparent;
-
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	:hover,
+	:focus {
+		&.menu__open {
+			fill: $accent-color;
+		}
+	}
 	@media screen and (min-width: 768px) {
 		display: none;
 	}
 }
-.nav__menu {
-	display: none;
-}
 
-.is-open {
-	.nav__menu {
+.is-hidden {
+	.nav__container {
 		display: block;
 	}
 }
-.is-open {
-	.nav__close {
-		display: block;
-	}
-}
+// .is-hidden {
+// 	.nav__close {
+// 		display: block;
+// 	}
+// }
 .nav__container {
 	background-color: $main-color;
 	padding: 48px 40px;
 
-	&.is-open {
-		display: block;
-	}
-	width: 100%;
+	// &.is-hidden {
+	// 	display: none;
+	// }
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
 	@media screen and (min-width: 480px) {
 		width: 480px;
 	}
@@ -260,10 +268,10 @@ nav {
 	line-height: 1.22;
 	color: $accent-color;
 	border-right: 1px solid rgba(33, 33, 33, 0.2);
-	:not(:first-child) {
+	&:not(:first-child(1)) {
 		padding-left: 10px;
 	}
-	:not(:last-child) {
+	&:not(:last-child(1)) {
 		padding-right: 10px;
 	}
 }

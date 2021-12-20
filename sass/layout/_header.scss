@@ -11,6 +11,9 @@ header {
 		justify-content: space-between;
 	}
 	align-items: center;
+	@media screen and (min-width: 768px) {
+		height: 80px;
+	}
 }
 .logo {
 	font-family: Raleway;
@@ -22,6 +25,13 @@ header {
 	text-decoration: inherit;
 	// margin-right: 93px;
 	color: $accent-color;
+	@media screen and (max-width: 1199px) {
+		font-size: 24px;
+		line-height: 1.17;
+	}
+	@media screen and (min-width: 768px) {
+		margin-right: 86px;
+	}
 }
 .header__logo {
 	color: $second-logo-color;
@@ -46,39 +56,36 @@ header {
 	}
 }
 
-.is-hidden {
-	.nav__container {
-		display: block;
-	}
-}
-// .is-hidden {
-// 	.nav__close {
-// 		display: block;
-// 	}
-// }
 .nav__container {
 	background-color: $main-color;
 	padding: 48px 40px;
 
-	// &.is-hidden {
-	// 	display: none;
-	// }
-	width: 100vw;
-	height: 100vh;
 	position: fixed;
 	top: 0px;
 	@media screen and (min-width: 480px) {
 		width: 480px;
+		height: 796px;
 	}
 	@media screen and (max-width: 767px) {
-		display: none;
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 796px;
+
+		&.is-hidden {
+			display: none;
+		}
 	}
 	@media screen and (min-width: 768px) {
 		display: flex;
+		width: 516px;
+		height: 80px;
+		padding: 0;
+		position: relative;
+		justify-content: space-between;
+	}
+	width: 100vw;
+	height: 100vh;
+	@media screen and (min-width: 1200px) {
 	}
 }
 .nav__close {
@@ -90,8 +97,6 @@ header {
 	right: 15px;
 	width: 40px;
 	height: 40px;
-	// border: 1px solid $border-color;
-	// border-radius: 50%;
 	border-style: none;
 	outline: none;
 	background-color: inherit;
@@ -102,6 +107,9 @@ header {
 	&:hover .nav__end,
 	&:focus .nav__end {
 		fill: $accent-color;
+	}
+	@media screen and (min-width: 768px) {
+		display: none;
 	}
 }
 
@@ -124,11 +132,8 @@ header {
 }
 .nav__link {
 	outline: none;
-
 	position: relative;
-
 	display: block;
-
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
@@ -147,6 +152,8 @@ header {
 	@media screen and (min-width: 768px) {
 		padding-top: 32px;
 		padding-bottom: 32px;
+		font-size: 14px;
+		line-height: 1.14;
 		&::after {
 			position: absolute;
 			left: 0px;
@@ -189,7 +196,14 @@ nav {
 
 .auth {
 	display: block;
-	// display: flex;
+	@media screen and (min-width: 768px) {
+		padding: 21px 0px;
+		display: flex;
+		flex-wrap: wrap;
+		// justify-content: flex-end;
+		// align-content: space-between;
+	}
+
 	// margin-left: auto;
 }
 
@@ -228,6 +242,10 @@ nav {
 	@media screen and (max-width: 479px) {
 		font-size: 24px;
 	}
+	@media screen and (min-width: 768px) {
+		font-size: 12px;
+		line-height: 1.17;
+	}
 }
 .auth__mail {
 	@media screen and (max-width: 767px) {
@@ -235,6 +253,10 @@ nav {
 		line-height: 1.17;
 		position: relative;
 		top: 80px;
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 12px;
+		line-height: 1.17;
 	}
 }
 .auth__icon {
@@ -253,11 +275,24 @@ nav {
 		fill: $accent-color;
 	}
 }
+
 .navsocial__list {
 	position: relative;
 	top: 100px;
 	@media screen and (min-width: 768px) {
 		display: none;
+	}
+}
+.navsocial__item {
+	&:not(:last-child) {
+		padding-right: 10px;
+		border-right: 1px solid rgba(33, 33, 33, 0.2);
+	}
+	&:not(:first-child) {
+		padding-left: 10px;
+	}
+	@media screen and (max-width: 479px) {
+		margin-bottom: 10px;
 	}
 }
 .navsocial__link {
@@ -267,11 +302,4 @@ nav {
 	font-size: 18px;
 	line-height: 1.22;
 	color: $accent-color;
-	border-right: 1px solid rgba(33, 33, 33, 0.2);
-	&:not(:first-child(1)) {
-		padding-left: 10px;
-	}
-	&:not(:last-child(1)) {
-		padding-right: 10px;
-	}
 }

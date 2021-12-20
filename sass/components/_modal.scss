@@ -143,6 +143,13 @@
 	}
 }
 .modal__consent {
+	@media screen and (max-width: 1199px) {
+		font-size: 12px;
+		line-height: 1.17;
+	}
+	@media screen and (max-width: 479px) {
+		flex-wrap: wrap;
+	}
 	display: flex;
 	justify-content: center;
 	vertical-align: middle;
@@ -161,8 +168,6 @@
 	border: 2px solid $second-color;
 	border-radius: 2px;
 
-	position: relative;
-	top: 4px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -178,6 +183,10 @@
 		background-color: $accent-color;
 		border: none;
 		fill: $main-color;
+	}
+	@media screen and (min-width: 1200px) {
+		position: relative;
+		top: 4px;
 	}
 }
 

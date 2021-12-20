@@ -178,6 +178,12 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
 .logo {
   font-family: Raleway;
   font-style: normal;
@@ -187,6 +193,19 @@ header {
   letter-spacing: 0.03em;
   text-decoration: inherit;
   color: #2196f3;
+}
+
+@media screen and (max-width: 1199px) {
+  .logo {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 86px;
+  }
 }
 
 .header__logo {
@@ -215,38 +234,41 @@ header {
   }
 }
 
-.is-hidden .nav__container {
-  display: block;
-}
-
 .nav__container {
   background-color: #ffffff;
   padding: 48px 40px;
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media screen and (min-width: 480px) {
   .nav__container {
     width: 480px;
+    height: 796px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .nav__container {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    height: 796px;
+  }
+  .nav__container.is-hidden {
+    display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   .nav__container {
     display: flex;
+    width: 516px;
+    height: 80px;
+    padding: 0;
+    position: relative;
+    justify-content: space-between;
   }
 }
 
@@ -270,6 +292,12 @@ header {
 .nav__close:hover .nav__end,
 .nav__close:focus .nav__end {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__close {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -321,6 +349,8 @@ header {
   .nav__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
   .nav__link::after {
     position: absolute;
@@ -351,6 +381,16 @@ header {
 
 .auth {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .auth {
+    padding: 21px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
+  }
 }
 
 .auth__link {
@@ -385,12 +425,26 @@ header {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .auth__tel {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .auth__mail {
     font-size: 24px;
     line-height: 1.17;
     position: relative;
     top: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .auth__mail {
+    font-size: 12px;
+    line-height: 1.17;
   }
 }
 
@@ -425,6 +479,21 @@ header {
   }
 }
 
+.navsocial__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.navsocial__item:not(:first-child) {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .navsocial__item {
+    margin-bottom: 10px;
+  }
+}
+
 .navsocial__link {
   width: 81px;
   height: 22px;
@@ -432,15 +501,6 @@ header {
   font-size: 18px;
   line-height: 1.22;
   color: #2196f3;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.navsocial__link:not(:first-child(1)) {
-  padding-left: 10px;
-}
-
-.navsocial__link:not(:last-child(1)) {
-  padding-right: 10px;
 }
 
 .hero {
@@ -1304,14 +1364,25 @@ footer {
   color: #757575;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal__consent {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal__consent {
+    flex-wrap: wrap;
+  }
+}
+
 .modal__tick {
   width: 16px;
   height: 15px;
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 2px;
-  position: relative;
-  top: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1329,6 +1400,13 @@ footer {
   background-color: #2196f3;
   border: none;
   fill: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__tick {
+    position: relative;
+    top: 4px;
+  }
 }
 
 .modal__policy {

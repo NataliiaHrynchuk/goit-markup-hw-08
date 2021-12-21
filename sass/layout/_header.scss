@@ -1,7 +1,6 @@
 header {
 	border-bottom: 1px solid $line-color;
 	position: relative;
-	// min-height: 80px;
 }
 .header {
 	display: flex;
@@ -23,14 +22,13 @@ header {
 	line-height: 1.38;
 	letter-spacing: 0.03em;
 	text-decoration: inherit;
-	// margin-right: 93px;
 	color: $accent-color;
 	@media screen and (max-width: 1199px) {
 		font-size: 24px;
 		line-height: 1.17;
 	}
-	@media screen and (min-width: 768px) {
-		margin-right: 86px;
+	@media screen and (min-width: 1200px) {
+		line-height: 1.19;
 	}
 }
 .header__logo {
@@ -62,6 +60,8 @@ header {
 
 	position: fixed;
 	top: 0px;
+	width: 100%;
+	height: 100vh;
 	@media screen and (min-width: 480px) {
 		width: 480px;
 		height: 796px;
@@ -83,9 +83,9 @@ header {
 		position: relative;
 		justify-content: space-between;
 	}
-	width: 100vw;
-	height: 100vh;
+
 	@media screen and (min-width: 1200px) {
+		margin-left: 93px;
 	}
 }
 .nav__close {
@@ -128,7 +128,12 @@ header {
 		&:last-child {
 			margin-bottom: 302px;
 		}
-	} // &:not(:last-child) { // margin-right: 50px; // };;
+	}
+	@media screen and (min-width: 1200px) {
+		&:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
 }
 .nav__link {
 	outline: none;
@@ -183,45 +188,35 @@ header {
 		opacity: 1;
 	}
 }
-nav {
-	// display: flex;
-	// @media screen and (max-width: 767px) {
-	// 	position: absolute;
-	// 	top: 100%;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 796px;
-	// }
-}
 
 .auth {
 	display: block;
 	@media screen and (min-width: 768px) {
 		padding: 21px 0px 21px 84px;
-		// display: flex;
-		// flex-wrap: wrap;
-		// justify-content: flex-end;
-		// align-content: space-between;
 	}
-
-	// margin-left: auto;
+	@media screen and (min-width: 1200px) {
+		width: 333px;
+		margin-left: 305px;
+		display: flex;
+		padding: 0;
+	}
 }
 
-.auth__item + .auth__item {
-	// margin-left: 50px;
+.auth__item {
+	@media screen and (min-width: 1200px) {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
 }
 
 .auth__link {
 	display: block;
-	// display: flex;
 
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: $timing-function;
 
 	font-weight: 500;
-	// font-size: 14px;
-	// line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: inherit;
 	color: $text-color;
@@ -230,11 +225,14 @@ nav {
 	&:focus {
 		color: $accent-color;
 	}
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
 }
 .auth__tel {
 	@media screen and (max-width: 767px) {
 		font-size: 34px;
-		line-height: 1.17;
+		line-height: 1.18;
 		color: $accent-color;
 		position: relative;
 		bottom: 30px;
@@ -245,6 +243,13 @@ nav {
 	@media screen and (min-width: 768px) {
 		font-size: 12px;
 		line-height: 1.17;
+	}
+	@media screen and (min-width: 1200px) {
+		width: 142px;
+		height: 16px;
+		margin-left: 30px;
+		font-size: 14px;
+		line-height: 1.14;
 	}
 }
 .auth__mail {
@@ -258,6 +263,12 @@ nav {
 		font-size: 12px;
 		line-height: 1.17;
 		margin-bottom: 10px;
+		@media screen and (min-width: 1200px) {
+			width: 161px;
+			height: 16px;
+			font-size: 14px;
+			line-height: 1.14;
+		}
 	}
 }
 .auth__icon {

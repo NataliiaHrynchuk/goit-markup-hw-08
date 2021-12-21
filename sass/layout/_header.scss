@@ -197,9 +197,9 @@ nav {
 .auth {
 	display: block;
 	@media screen and (min-width: 768px) {
-		padding: 21px 0px;
-		display: flex;
-		flex-wrap: wrap;
+		padding: 21px 0px 21px 84px;
+		// display: flex;
+		// flex-wrap: wrap;
 		// justify-content: flex-end;
 		// align-content: space-between;
 	}
@@ -257,6 +257,7 @@ nav {
 	@media screen and (min-width: 768px) {
 		font-size: 12px;
 		line-height: 1.17;
+		margin-bottom: 10px;
 	}
 }
 .auth__icon {

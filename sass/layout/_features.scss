@@ -12,7 +12,23 @@
 	display: inline-block;
 	text-align: center;
 	@media screen and (max-width: 767px) {
-		margin-bottom: 30px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		&:last-child {
+			margin-bottom: 60px;
+		}
+	}
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		&:not(:nth-last-child(-n + 2)) {
+			margin-bottom: 30px;
+		}
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 60px;
+		}
+		&:nth-child(2n + 1) {
+			margin-right: 30px;
+		}
 	}
 }
 
@@ -22,17 +38,19 @@
 .features__wrap {
 	height: 120px;
 	width: 100%;
+	margin-bottom: 30px;
 	@media screen and (min-width: 480px) {
 		width: 450px;
 	}
 	@media screen and (min-width: 768px) {
 		width: 354px;
 	}
+
 	display: flex;
 
 	background-color: $second-bg-color;
 	border-radius: 4px;
-	margin-bottom: 30px;
+
 	align-items: center;
 	justify-content: center;
 

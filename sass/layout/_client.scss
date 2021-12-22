@@ -1,8 +1,9 @@
 .client__list {
 	display: flex;
 	flex-wrap: wrap;
-	// margin: -15px;
-	// justify-content: space-between;
+	@media screen and (min-width: 1200px) {
+		flex-wrap: nowrap;
+	}
 }
 .client__item {
 	flex-basis: calc((100% - 30px) / 2);
@@ -15,13 +16,20 @@
 			margin-bottom: 30px;
 		}
 	}
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
 		flex-basis: calc((100% - 60px) / 3);
 		&:not(:nth-child(3n)) {
 			margin-right: 30px;
 		}
 		&:not(:nth-last-child(-n + 3)) {
 			margin-bottom: 30px;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 0;
+		flex-basis: calc((100% - 30px) / 6);
+		&:not(:last-child) {
+			margin-right: 30px;
 		}
 	}
 }
@@ -41,7 +49,6 @@
 	&:focus {
 		border: 1px solid $accent-color;
 	}
-	// width: 170px;
 }
 
 .client__icon {

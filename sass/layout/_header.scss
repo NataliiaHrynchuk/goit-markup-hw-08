@@ -92,8 +92,8 @@ header {
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: 10px;
-	right: 15px;
+	top: 20px;
+	right: 20px;
 	width: 40px;
 	height: 40px;
 	border-style: none;
@@ -106,6 +106,9 @@ header {
 	&:hover .nav__end,
 	&:focus .nav__end {
 		fill: $accent-color;
+	}
+	@media screen and (min-width: 480px) {
+		right: 120px;
 	}
 	@media screen and (min-width: 768px) {
 		display: none;

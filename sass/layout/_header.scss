@@ -59,13 +59,14 @@ header {
 	padding: 48px 40px;
 
 	position: fixed;
+	z-index: 1;
 	top: 0px;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
-	@media screen and (min-width: 480px) {
-		width: 480px;
-		height: 796px;
-	}
+	// @media screen and (min-width: 480px) {
+	// 	width: 480px;
+	// 	height: 796px;
+	// }
 	@media screen and (max-width: 767px) {
 		position: absolute;
 		top: 0;
@@ -130,7 +131,7 @@ header {
 			margin-bottom: 302px;
 		}
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 768px) {
 		&:not(:last-child) {
 			margin-right: 50px;
 		}
@@ -226,7 +227,7 @@ header {
 	&:focus {
 		color: $accent-color;
 	}
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 768px) {
 		display: flex;
 	}
 }
@@ -238,9 +239,13 @@ header {
 		position: relative;
 		bottom: 30px;
 	}
+	@media screen and (min-width: 611px) and (max-width: 767px) {
+		right: 80%;
+	}
 	@media screen and (max-width: 479px) {
 		font-size: 24px;
 	}
+
 	@media screen and (min-width: 768px) {
 		font-size: 12px;
 		line-height: 1.17;
@@ -261,6 +266,7 @@ header {
 		top: 80px;
 	}
 	@media screen and (min-width: 768px) {
+		display: flex;
 		font-size: 12px;
 		line-height: 1.17;
 		margin-bottom: 10px;

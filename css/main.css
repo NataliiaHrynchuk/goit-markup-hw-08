@@ -295,8 +295,8 @@ header {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   width: 40px;
   height: 40px;
   border-style: none;
@@ -310,6 +310,12 @@ header {
 .nav__close:hover .nav__end,
 .nav__close:focus .nav__end {
   fill: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .nav__close {
+    right: 120px;
+  }
 }
 
 @media screen and (min-width: 768px) {
